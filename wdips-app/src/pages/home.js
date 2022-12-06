@@ -1,8 +1,5 @@
 import React from 'react';
-import "./App.css"
 import Read from './pages/test.js';
-import Game from './pages/game.js';
-import history from './history';
 import algoliasearch from 'algoliasearch/lite';
 import {
   InstantSearch,
@@ -41,9 +38,6 @@ const App = () => {
   return (
     <div>
       <Router>
-        <Routes>
-          <Route path="/:appid" element={<Read />} />
-        </Routes>
         <InstantSearch searchClient={searchClient} indexName='game_NAME' indexID='name'>
           <Configure hitsPerPage={6} />
           <h3 className='title'>What Do I Play Steam</h3>
@@ -52,7 +46,6 @@ const App = () => {
 
           <PoweredBy className='poweredby'/>
 
-        
           <Hits hitComponent={Hit} className="hits"/>
         </InstantSearch>
       </Router>

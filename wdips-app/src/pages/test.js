@@ -1,48 +1,35 @@
+//import { collection, getDocs } from 'firebase/compat/firestore';
+import { collection, getDoc, doc } from 'firebase/firestore'; 
 import React,{ useState, useEffect} from 'react';
-import db from './firebase.js';
+import db from '../firebase.js';
+import { useParams } from 'react-router-dom';
+
 
 const Read = () => {
- 
+    let { appid } = useParams();
     const [info , setInfo] = useState([]);
- 
+    
+    const Fetchdata = async()=>{
+        const docRef = doc(db, "games", appid);
+        const docSnap = await getDoc(docRef);
+        const gData = docSnap.exists() ? docSnap.data() : null
+
+        if (gData === null || gData === undefined) return null
+        console.log(gData);
+        setInfo([...info,gData]);
+        return gData
+    }
 
     useEffect(() => {
-        fetchBlogs();
+        Fetchdata();
       }, [])
-    
-    // Start the fetch operation as soon as
-    // the page loads
-    // window.addEventListener('load', () => {
-    //     Fetchdata();
-    //   });
-
-    const fetchBlogs=async()=>{
-        const response=db.collection('games');
-        const data=await response.get();
-        data.docs.forEach(item=>{
-            setInfo([...info,item.data()])
-        })
-    }
- 
-    // Fetch the required data using the get() method
-    const Fetchdata = async()=>{
-        db.collection("games").get().then((querySnapshot) => {
-            
-            // Loop through the data and store
-            // it in array to display
-            querySnapshot.forEach(element => {
-                var data = element.data();
-                setInfo(arr => [...arr , data]);
-                 
-            });
-        })
-    }
      
     // Display the result on the page
     return (
         <div>
             <center>
             <h2>Student Details</h2>
+            <h1>Id: { appid }</h1>
             </center>
          
         {
