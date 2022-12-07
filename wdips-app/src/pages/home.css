@@ -1,0 +1,60 @@
+.click {
+    position: relative;
+    border-radius: 25px;
+    width: 460px;
+    height: 215px;
+    margin: 0%;
+    background-color: transparent;
+    cursor: pointer;
+    /* 460 x 215*/
+    /* width: 300px;
+    font-size: 40px;
+    margin: 100px auto;
+    padding: 10px;
+    cursor: pointer; */
+}
+.click:hover {
+    background-color: rgba(0, 0, 0, .5);
+    transition-duration: 0.5s;
+}
+
+.center{
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 1px;
+    font-size: 18px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 12px;
+}
+.btnImg{ 
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-start;
+    width: 100px;
+}
+.button:hover {
+    width: 200px;
+}
+.button .imageContainer {
+    height: 50px;
+    width: 50px;
+    align-self: center;
+}
+.imageContainer img {
+    height: auto;
+    width: 100%;
+}

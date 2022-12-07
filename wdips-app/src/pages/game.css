@@ -1,0 +1,33 @@
+.gameImg{ 
+    opacity: 1;
+    margin: 10px;
+    border-radius: 25px;
+    box-shadow: 1px 2px 10px #66c0f4;
+}
+.gameImg:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.btnSteam{
+    background-color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+.btnSteam:hover{
+    transform: scale(1.5);
+    transition-duration: 0.5s;
+}
+tr{
+    border-radius: 25px;
+}
+tr:nth-child(even){
+    background-color: #f2f2f2;
+    border-radius: 25px;
+}
+td{
+    margin: 0px;
+    text-align: center;
+}

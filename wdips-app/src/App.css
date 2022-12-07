@@ -24,10 +24,11 @@
 
 .hits {
   margin: auto;
-  width: 96%;
-  border-style: solid;
+  justify-content: center;
+  width: 35%;
+  border-style: solid; 
   border-width: medium;
-  border-color: #e6e6e6;
+  border-color: #ffffff;
   /* order buttons in rows of 3 */
   /* display: grid;
   grid-template-columns: repeat(3, 1fr);
