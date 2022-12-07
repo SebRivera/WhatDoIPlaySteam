@@ -8,7 +8,7 @@ I created a Medium entry where I go over how the Recommender System was built.
 
 [GitHub Back-End Repo](https://github.com/SebRivera/WDiPS-API)
 
-# Test out the Site!
+# Test out the Recommender!
 [WDIPS System site](https://wdips-2802.web.app)
 
 
